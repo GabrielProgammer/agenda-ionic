@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title >
+        	<ion-icon name="contact"></ion-icon>
+            Detalhe
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content>
+	<ion-card>
+		<img src="../assets/imgs/contact.png" class="contact-img">	
+		<ion-card-content>
+			<ion-card-title>
+				<div text-center>
+					{{ contato.nome }}	
+				</div>	
+			</ion-card-title>
+			<p>
+			<h2><b>Telefone: </b>{{contato.telefone}}</h2>
+    		<h2><b>E-mail: </b><i>{{contato.email}}</i></h2>
+		</ion-card-content>
+	</ion-card> 
+
+	<ion-fab color="primary" left bottom>
+    	<button ion-fab (click)="removeContato()">
+    		<ion-icon name="trash"></ion-icon>
+    	</button>
+ 	</ion-fab>
+
+	<ion-fab color="primary" right bottom>
+    	<button ion-fab (click)="editaContato()">
+    		<ion-icon name="create"></ion-icon>
+    	</button>
+ 	</ion-fab>  
+</ion-content>

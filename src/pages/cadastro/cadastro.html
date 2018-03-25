@@ -1,0 +1,41 @@
+<!--
+  Generated template for the CadastroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Contato</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (ngSubmit)="cadastrarContato()">
+    <ion-item>
+        <ion-label color="primary">Nome: </ion-label>
+        <ion-input placeholder="Informe o nome ... " 
+          [(ngModel)]="contato.nome"
+          name = "nome">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">Telefone: </ion-label>
+        <ion-input type="tel" placeholder="Informe o telefone ... " [(ngModel)]="contato.telefone"
+          name = "telefone">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="primary">E-mail: </ion-label>
+        <ion-input type="email" placeholder="Informe o e-mail ... " [(ngModel)]="contato.email"
+          name = "email">
+        </ion-input>
+    </ion-item>
+
+    <button ion-button type="submit" color="primary">Cadastrar</button>
+  </form>
+
+</ion-content>
