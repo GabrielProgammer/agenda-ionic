@@ -15,6 +15,7 @@ import 'rxjs/add/operator/map';
 export class HomePage {
 
   contatos = [];
+  private load;
   /*[
     {'nome' : 'Ana', 'telefone' : '988397858', 'email' : 'ana@gmail.com'},
     {'nome' : 'João', 'telefone' : '988397858', 'email' : 'joao@gmail.com'},
@@ -45,7 +46,7 @@ export class HomePage {
   }
 
     obterContatosAPI() {
-    this.http.get('http://192.168.0.5:3000/contatos')
+    this.http.get('http://192.168.0.6:3000/contatos')
         .map(response => response.json())
         .toPromise()
         .then(

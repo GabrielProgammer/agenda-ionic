@@ -29,15 +29,15 @@ export class EdicaoPage {
   }
 
   cadastrarContato(){
-    console.log("Cadastrando contato: " + this.contato.nome);
-    console.log("Cadastrando contato: " + this.contato.telefone);
-    console.log("Cadastrando contato: " + this.contato.email);
+    console.log("Editando contato: " + this.contato.nome);
+    console.log("Editando contato: " + this.contato.telefone);
+    console.log("Editando contato: " + this.contato.email);
 
     let body = JSON.stringify(this.contato);
     let headers = new Headers({'Content-Type': 'application/json'});
     let options = new RequestOptions({ headers: headers });
 
-    this.http.put('http://192.168.0.5:3000/contatos/' + this.id, body, options)
+    this.http.put('http://192.168.0.6:3000/contatos/' + this.id, body, options)
         .map(res => res.json())
         .toPromise()
         .then(response => console.log(response));
